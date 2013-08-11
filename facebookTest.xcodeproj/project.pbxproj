@@ -151,8 +151,8 @@
 		F55B7E3017B248B80065DF37 /* facebookTest */ = {
 			isa = PBXGroup;
 			children = (
-				F55B7E7817B2520D0065DF37 /* Views */,
 				F55B7E6C17B248C80065DF37 /* Controllers */,
+				F55B7E7817B2520D0065DF37 /* Views */,
 				F55B7E3917B248B80065DF37 /* EFAppDelegate.h */,
 				F55B7E3A17B248B80065DF37 /* EFAppDelegate.m */,
 				F55B7E4217B248B80065DF37 /* MainStoryboard.storyboard */,
@@ -520,6 +520,7 @@
 				F55B7E6817B248B80065DF37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F55B7E6917B248B80065DF37 /* Build configuration list for PBXNativeTarget "facebookTestTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +529,7 @@
 				F55B7E6B17B248B80065DF37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

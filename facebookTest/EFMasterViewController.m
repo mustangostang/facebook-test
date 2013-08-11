@@ -8,6 +8,7 @@
 
 #import "EFMasterViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import "EFCell.h"
 
 #import "EFDetailViewController.h"
 #import "EFAppDelegate.h"
@@ -100,9 +101,9 @@
     return [sectionInfo numberOfObjects];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (EFCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    EFCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EFCell" forIndexPath:indexPath];
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
@@ -173,10 +174,12 @@
     [self.tableView reloadData];
 }
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+- (void)configureCell:(EFCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"name"] description];
+    cell.userName.text = [[object valueForKey:@"name"] description];
+    cell.userGender.text = [[object valueForKey:@"gender"] description];
+    cell.userFacebookID.text = [[object valueForKey:@"id"] description];
 }
 
 @end
