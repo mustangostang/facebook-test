@@ -123,12 +123,9 @@
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation
 {
-    // attempt to extract a token from the url
-    
     if ([[url scheme] hasPrefix:@"fb"]) {
         return [FBSession.activeSession handleOpenURL:url];
-    }
-    
+    }    
     return YES;
 }
 

@@ -58,11 +58,10 @@
         [FBRequestConnection startWithGraphPath:@"me/friends" parameters: @{ @"fields": @"id,name,gender,picture" } HTTPMethod: @"GET" completionHandler:
          ^(FBRequestConnection *connection, id result, NSError *error) {
             NSArray* friends = [result objectForKey:@"data"];
-            NSLog(@"Found: %i friends", friends.count);
+            // NSLog(@"Found: %i friends", friends.count);
+             
             for (NSDictionary<FBGraphUser>* friend in friends) {
                 for (NSUInteger i = 0; i < 10; i++) {
-                //    NSString *friendId = [NSString stringWithFormat: @"%@ (%d)", friend[@"id"], i];
-                
                     
                 NSManagedObject* newFriend = [NSEntityDescription insertNewObjectForEntityForName:@"Friend" inManagedObjectContext:self.managedObjectContext];
                 [newFriend setValue: friend[@"id"] forKey: @"id"];
@@ -71,19 +70,10 @@
                 [newFriend setValue: friend[@"picture"][@"data"][@"url"] forKey: @"picture"];
 
                 }
-                    
-                
-                NSLog(@"%@", friend);
-                NSLog(@"I have a friend named %@ with id %@", friend.name, friend.id);
-                
-                
-                
             }
              
              NSError *saveError = nil;
              [self.managedObjectContext save:&saveError];
-             
-             
         }];
     }];
 }
