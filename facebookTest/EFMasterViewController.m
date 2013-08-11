@@ -12,6 +12,7 @@
 
 #import "EFDetailViewController.h"
 #import "EFAppDelegate.h"
+#import <UIImageView+AFNetworking.h>
 
 @interface EFMasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -146,7 +147,7 @@
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending: YES];
     NSArray *sortDescriptors = @[sortDescriptor];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
@@ -180,6 +181,7 @@
     cell.userName.text = [[object valueForKey:@"name"] description];
     cell.userGender.text = [[object valueForKey:@"gender"] description];
     cell.userFacebookID.text = [[object valueForKey:@"id"] description];
+    [cell.userpic setImageWithURL: [NSURL URLWithString: [object valueForKey:@"picture"]]];
 }
 
 @end
