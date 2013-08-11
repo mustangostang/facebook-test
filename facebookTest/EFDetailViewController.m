@@ -7,6 +7,7 @@
 //
 
 #import "EFDetailViewController.h"
+#import "EFAppDelegate.h"
 
 @interface EFDetailViewController ()
 - (void)configureView;
@@ -24,6 +25,17 @@
         // Update the view.
         [self configureView];
     }
+}
+
+- (IBAction)saveFriend: (id)sender
+{
+    [self.detailItem setValue: self.friendFacebookId.text forKey: @"id"];
+    [self.detailItem setValue: self.friendName.text forKey: @"name"];
+    [self.detailItem setValue: self.friendGender.text forKey: @"gender"];
+    [self.detailItem setValue: self.friendUserpic.text forKey: @"picture"];
+    EFAppDelegate* appDelegate = (EFAppDelegate*)[[UIApplication sharedApplication] delegate];
+    [appDelegate saveContext];
+    [self.navigationController popViewControllerAnimated: YES];
 }
 
 - (void)configureView
