@@ -1,550 +1,1387 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		F55B7E2917B248B80065DF37 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55B7E2817B248B80065DF37 /* UIKit.framework */; };
-		F55B7E2B17B248B80065DF37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55B7E2A17B248B80065DF37 /* Foundation.framework */; };
-		F55B7E2D17B248B80065DF37 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55B7E2C17B248B80065DF37 /* CoreGraphics.framework */; };
-		F55B7E2F17B248B80065DF37 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55B7E2E17B248B80065DF37 /* CoreData.framework */; };
-		F55B7E3517B248B80065DF37 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F55B7E3317B248B80065DF37 /* InfoPlist.strings */; };
-		F55B7E3717B248B80065DF37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F55B7E3617B248B80065DF37 /* main.m */; };
-		F55B7E3B17B248B80065DF37 /* EFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F55B7E3A17B248B80065DF37 /* EFAppDelegate.m */; };
-		F55B7E3D17B248B80065DF37 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F55B7E3C17B248B80065DF37 /* Default.png */; };
-		F55B7E3F17B248B80065DF37 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F55B7E3E17B248B80065DF37 /* Default@2x.png */; };
-		F55B7E4117B248B80065DF37 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F55B7E4017B248B80065DF37 /* Default-568h@2x.png */; };
-		F55B7E4417B248B80065DF37 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F55B7E4217B248B80065DF37 /* MainStoryboard.storyboard */; };
-		F55B7E4717B248B80065DF37 /* facebookTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F55B7E4517B248B80065DF37 /* facebookTest.xcdatamodeld */; };
-		F55B7E4A17B248B80065DF37 /* EFMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F55B7E4917B248B80065DF37 /* EFMasterViewController.m */; };
-		F55B7E4D17B248B80065DF37 /* EFDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F55B7E4C17B248B80065DF37 /* EFDetailViewController.m */; };
-		F55B7E5517B248B80065DF37 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55B7E5417B248B80065DF37 /* SenTestingKit.framework */; };
-		F55B7E5617B248B80065DF37 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55B7E2817B248B80065DF37 /* UIKit.framework */; };
-		F55B7E5717B248B80065DF37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55B7E2A17B248B80065DF37 /* Foundation.framework */; };
-		F55B7E5817B248B80065DF37 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55B7E2E17B248B80065DF37 /* CoreData.framework */; };
-		F55B7E6017B248B80065DF37 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F55B7E5E17B248B80065DF37 /* InfoPlist.strings */; };
-		F55B7E6317B248B80065DF37 /* facebookTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F55B7E6217B248B80065DF37 /* facebookTestTests.m */; };
-		F55B7E6E17B249BB0065DF37 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55B7E6D17B249BB0065DF37 /* FacebookSDK.framework */; };
-		F55B7E7017B24A390065DF37 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55B7E6F17B24A390065DF37 /* Accounts.framework */; };
-		F55B7E7217B24A470065DF37 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55B7E7117B24A470065DF37 /* Social.framework */; };
-		F55B7E7417B24A560065DF37 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F55B7E7317B24A560065DF37 /* libsqlite3.dylib */; };
-		F55B7E7617B24ABE0065DF37 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55B7E7517B24ABE0065DF37 /* AdSupport.framework */; };
-		F55B7E7B17B2521B0065DF37 /* EFCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F55B7E7A17B2521B0065DF37 /* EFCell.m */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		F55B7E5917B248B80065DF37 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F55B7E1D17B248B80065DF37 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F55B7E2417B248B80065DF37;
-			remoteInfo = facebookTest;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		F55B7E2517B248B80065DF37 /* facebookTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = facebookTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F55B7E2817B248B80065DF37 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		F55B7E2A17B248B80065DF37 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		F55B7E2C17B248B80065DF37 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		F55B7E2E17B248B80065DF37 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		F55B7E3217B248B80065DF37 /* facebookTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "facebookTest-Info.plist"; sourceTree = "<group>"; };
-		F55B7E3417B248B80065DF37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F55B7E3617B248B80065DF37 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F55B7E3817B248B80065DF37 /* facebookTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "facebookTest-Prefix.pch"; sourceTree = "<group>"; };
-		F55B7E3917B248B80065DF37 /* EFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFAppDelegate.h; sourceTree = "<group>"; };
-		F55B7E3A17B248B80065DF37 /* EFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EFAppDelegate.m; sourceTree = "<group>"; };
-		F55B7E3C17B248B80065DF37 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		F55B7E3E17B248B80065DF37 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		F55B7E4017B248B80065DF37 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		F55B7E4317B248B80065DF37 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		F55B7E4617B248B80065DF37 /* facebookTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = facebookTest.xcdatamodel; sourceTree = "<group>"; };
-		F55B7E4817B248B80065DF37 /* EFMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFMasterViewController.h; sourceTree = "<group>"; };
-		F55B7E4917B248B80065DF37 /* EFMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EFMasterViewController.m; sourceTree = "<group>"; };
-		F55B7E4B17B248B80065DF37 /* EFDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFDetailViewController.h; sourceTree = "<group>"; };
-		F55B7E4C17B248B80065DF37 /* EFDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EFDetailViewController.m; sourceTree = "<group>"; };
-		F55B7E5317B248B80065DF37 /* facebookTestTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = facebookTestTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F55B7E5417B248B80065DF37 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		F55B7E5D17B248B80065DF37 /* facebookTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "facebookTestTests-Info.plist"; sourceTree = "<group>"; };
-		F55B7E5F17B248B80065DF37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F55B7E6117B248B80065DF37 /* facebookTestTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = facebookTestTests.h; sourceTree = "<group>"; };
-		F55B7E6217B248B80065DF37 /* facebookTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = facebookTestTests.m; sourceTree = "<group>"; };
-		F55B7E6D17B249BB0065DF37 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
-		F55B7E6F17B24A390065DF37 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
-		F55B7E7117B24A470065DF37 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		F55B7E7317B24A560065DF37 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		F55B7E7517B24ABE0065DF37 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		F55B7E7917B2521B0065DF37 /* EFCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFCell.h; sourceTree = "<group>"; };
-		F55B7E7A17B2521B0065DF37 /* EFCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFCell.m; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		F55B7E2217B248B80065DF37 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F55B7E7617B24ABE0065DF37 /* AdSupport.framework in Frameworks */,
-				F55B7E7417B24A560065DF37 /* libsqlite3.dylib in Frameworks */,
-				F55B7E7217B24A470065DF37 /* Social.framework in Frameworks */,
-				F55B7E7017B24A390065DF37 /* Accounts.framework in Frameworks */,
-				F55B7E2917B248B80065DF37 /* UIKit.framework in Frameworks */,
-				F55B7E2B17B248B80065DF37 /* Foundation.framework in Frameworks */,
-				F55B7E2D17B248B80065DF37 /* CoreGraphics.framework in Frameworks */,
-				F55B7E2F17B248B80065DF37 /* CoreData.framework in Frameworks */,
-				F55B7E6E17B249BB0065DF37 /* FacebookSDK.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F55B7E4F17B248B80065DF37 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F55B7E5517B248B80065DF37 /* SenTestingKit.framework in Frameworks */,
-				F55B7E5617B248B80065DF37 /* UIKit.framework in Frameworks */,
-				F55B7E5717B248B80065DF37 /* Foundation.framework in Frameworks */,
-				F55B7E5817B248B80065DF37 /* CoreData.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		F55B7E1C17B248B80065DF37 = {
-			isa = PBXGroup;
-			children = (
-				F55B7E3017B248B80065DF37 /* facebookTest */,
-				F55B7E5B17B248B80065DF37 /* facebookTestTests */,
-				F55B7E2717B248B80065DF37 /* Frameworks */,
-				F55B7E2617B248B80065DF37 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		F55B7E2617B248B80065DF37 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F55B7E2517B248B80065DF37 /* facebookTest.app */,
-				F55B7E5317B248B80065DF37 /* facebookTestTests.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		F55B7E2717B248B80065DF37 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F55B7E7517B24ABE0065DF37 /* AdSupport.framework */,
-				F55B7E7317B24A560065DF37 /* libsqlite3.dylib */,
-				F55B7E7117B24A470065DF37 /* Social.framework */,
-				F55B7E6F17B24A390065DF37 /* Accounts.framework */,
-				F55B7E6D17B249BB0065DF37 /* FacebookSDK.framework */,
-				F55B7E2817B248B80065DF37 /* UIKit.framework */,
-				F55B7E2A17B248B80065DF37 /* Foundation.framework */,
-				F55B7E2C17B248B80065DF37 /* CoreGraphics.framework */,
-				F55B7E2E17B248B80065DF37 /* CoreData.framework */,
-				F55B7E5417B248B80065DF37 /* SenTestingKit.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F55B7E3017B248B80065DF37 /* facebookTest */ = {
-			isa = PBXGroup;
-			children = (
-				F55B7E6C17B248C80065DF37 /* Controllers */,
-				F55B7E7817B2520D0065DF37 /* Views */,
-				F55B7E3917B248B80065DF37 /* EFAppDelegate.h */,
-				F55B7E3A17B248B80065DF37 /* EFAppDelegate.m */,
-				F55B7E4217B248B80065DF37 /* MainStoryboard.storyboard */,
-				F55B7E4517B248B80065DF37 /* facebookTest.xcdatamodeld */,
-				F55B7E3117B248B80065DF37 /* Supporting Files */,
-			);
-			path = facebookTest;
-			sourceTree = "<group>";
-		};
-		F55B7E3117B248B80065DF37 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F55B7E3217B248B80065DF37 /* facebookTest-Info.plist */,
-				F55B7E3317B248B80065DF37 /* InfoPlist.strings */,
-				F55B7E3617B248B80065DF37 /* main.m */,
-				F55B7E3817B248B80065DF37 /* facebookTest-Prefix.pch */,
-				F55B7E3C17B248B80065DF37 /* Default.png */,
-				F55B7E3E17B248B80065DF37 /* Default@2x.png */,
-				F55B7E4017B248B80065DF37 /* Default-568h@2x.png */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F55B7E5B17B248B80065DF37 /* facebookTestTests */ = {
-			isa = PBXGroup;
-			children = (
-				F55B7E6117B248B80065DF37 /* facebookTestTests.h */,
-				F55B7E6217B248B80065DF37 /* facebookTestTests.m */,
-				F55B7E5C17B248B80065DF37 /* Supporting Files */,
-			);
-			path = facebookTestTests;
-			sourceTree = "<group>";
-		};
-		F55B7E5C17B248B80065DF37 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F55B7E5D17B248B80065DF37 /* facebookTestTests-Info.plist */,
-				F55B7E5E17B248B80065DF37 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F55B7E6C17B248C80065DF37 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				F55B7E4817B248B80065DF37 /* EFMasterViewController.h */,
-				F55B7E4917B248B80065DF37 /* EFMasterViewController.m */,
-				F55B7E4B17B248B80065DF37 /* EFDetailViewController.h */,
-				F55B7E4C17B248B80065DF37 /* EFDetailViewController.m */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
-		F55B7E7817B2520D0065DF37 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				F55B7E7917B2521B0065DF37 /* EFCell.h */,
-				F55B7E7A17B2521B0065DF37 /* EFCell.m */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		F55B7E2417B248B80065DF37 /* facebookTest */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F55B7E6617B248B80065DF37 /* Build configuration list for PBXNativeTarget "facebookTest" */;
-			buildPhases = (
-				F55B7E2117B248B80065DF37 /* Sources */,
-				F55B7E2217B248B80065DF37 /* Frameworks */,
-				F55B7E2317B248B80065DF37 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = facebookTest;
-			productName = facebookTest;
-			productReference = F55B7E2517B248B80065DF37 /* facebookTest.app */;
-			productType = "com.apple.product-type.application";
-		};
-		F55B7E5217B248B80065DF37 /* facebookTestTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F55B7E6917B248B80065DF37 /* Build configuration list for PBXNativeTarget "facebookTestTests" */;
-			buildPhases = (
-				F55B7E4E17B248B80065DF37 /* Sources */,
-				F55B7E4F17B248B80065DF37 /* Frameworks */,
-				F55B7E5017B248B80065DF37 /* Resources */,
-				F55B7E5117B248B80065DF37 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F55B7E5A17B248B80065DF37 /* PBXTargetDependency */,
-			);
-			name = facebookTestTests;
-			productName = facebookTestTests;
-			productReference = F55B7E5317B248B80065DF37 /* facebookTestTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		F55B7E1D17B248B80065DF37 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				CLASSPREFIX = EF;
-				LastUpgradeCheck = 0460;
-				ORGANIZATIONNAME = empatika;
-			};
-			buildConfigurationList = F55B7E2017B248B80065DF37 /* Build configuration list for PBXProject "facebookTest" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = F55B7E1C17B248B80065DF37;
-			productRefGroup = F55B7E2617B248B80065DF37 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				F55B7E2417B248B80065DF37 /* facebookTest */,
-				F55B7E5217B248B80065DF37 /* facebookTestTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		F55B7E2317B248B80065DF37 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F55B7E3517B248B80065DF37 /* InfoPlist.strings in Resources */,
-				F55B7E3D17B248B80065DF37 /* Default.png in Resources */,
-				F55B7E3F17B248B80065DF37 /* Default@2x.png in Resources */,
-				F55B7E4117B248B80065DF37 /* Default-568h@2x.png in Resources */,
-				F55B7E4417B248B80065DF37 /* MainStoryboard.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F55B7E5017B248B80065DF37 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F55B7E6017B248B80065DF37 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		F55B7E5117B248B80065DF37 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		F55B7E2117B248B80065DF37 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F55B7E3717B248B80065DF37 /* main.m in Sources */,
-				F55B7E3B17B248B80065DF37 /* EFAppDelegate.m in Sources */,
-				F55B7E4717B248B80065DF37 /* facebookTest.xcdatamodeld in Sources */,
-				F55B7E4A17B248B80065DF37 /* EFMasterViewController.m in Sources */,
-				F55B7E4D17B248B80065DF37 /* EFDetailViewController.m in Sources */,
-				F55B7E7B17B2521B0065DF37 /* EFCell.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F55B7E4E17B248B80065DF37 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F55B7E6317B248B80065DF37 /* facebookTestTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F55B7E5A17B248B80065DF37 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F55B7E2417B248B80065DF37 /* facebookTest */;
-			targetProxy = F55B7E5917B248B80065DF37 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		F55B7E3317B248B80065DF37 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F55B7E3417B248B80065DF37 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		F55B7E4217B248B80065DF37 /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F55B7E4317B248B80065DF37 /* en */,
-			);
-			name = MainStoryboard.storyboard;
-			sourceTree = "<group>";
-		};
-		F55B7E5E17B248B80065DF37 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F55B7E5F17B248B80065DF37 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		F55B7E6417B248B80065DF37 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-			};
-			name = Debug;
-		};
-		F55B7E6517B248B80065DF37 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		F55B7E6717B248B80065DF37 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../FacebookSDK\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "facebookTest/facebookTest-Prefix.pch";
-				INFOPLIST_FILE = "facebookTest/facebookTest-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		F55B7E6817B248B80065DF37 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../FacebookSDK\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "facebookTest/facebookTest-Prefix.pch";
-				INFOPLIST_FILE = "facebookTest/facebookTest-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		F55B7E6A17B248B80065DF37 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/facebookTest.app/facebookTest";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "facebookTest/facebookTest-Prefix.pch";
-				INFOPLIST_FILE = "facebookTestTests/facebookTestTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		F55B7E6B17B248B80065DF37 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/facebookTest.app/facebookTest";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "facebookTest/facebookTest-Prefix.pch";
-				INFOPLIST_FILE = "facebookTestTests/facebookTestTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		F55B7E2017B248B80065DF37 /* Build configuration list for PBXProject "facebookTest" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F55B7E6417B248B80065DF37 /* Debug */,
-				F55B7E6517B248B80065DF37 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F55B7E6617B248B80065DF37 /* Build configuration list for PBXNativeTarget "facebookTest" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F55B7E6717B248B80065DF37 /* Debug */,
-				F55B7E6817B248B80065DF37 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F55B7E6917B248B80065DF37 /* Build configuration list for PBXNativeTarget "facebookTestTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F55B7E6A17B248B80065DF37 /* Debug */,
-				F55B7E6B17B248B80065DF37 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		F55B7E4517B248B80065DF37 /* facebookTest.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				F55B7E4617B248B80065DF37 /* facebookTest.xcdatamodel */,
-			);
-			currentVersion = F55B7E4617B248B80065DF37 /* facebookTest.xcdatamodel */;
-			path = facebookTest.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
-	};
-	rootObject = F55B7E1D17B248B80065DF37 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>0E25FE5D775D4D848247EC19</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>943589A82213453D9FA78584</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0E25FE5D775D4D848247EC19</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A71BB2CE1923437DA0DD252D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Pods.xcconfig</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>B53F119A909F44009C13283F</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Pods-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>D06CE595096143B19911860E</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>F55B7E1C17B248B80065DF37</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F55B7E3017B248B80065DF37</string>
+				<string>F55B7E5B17B248B80065DF37</string>
+				<string>F55B7E2717B248B80065DF37</string>
+				<string>F55B7E2617B248B80065DF37</string>
+				<string>A71BB2CE1923437DA0DD252D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E1D17B248B80065DF37</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>CLASSPREFIX</key>
+				<string>EF</string>
+				<key>LastUpgradeCheck</key>
+				<string>0460</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>empatika</string>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>F55B7E2017B248B80065DF37</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>F55B7E1C17B248B80065DF37</string>
+			<key>productRefGroup</key>
+			<string>F55B7E2617B248B80065DF37</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>F55B7E2417B248B80065DF37</string>
+				<string>F55B7E5217B248B80065DF37</string>
+			</array>
+		</dict>
+		<key>F55B7E2017B248B80065DF37</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>F55B7E6417B248B80065DF37</string>
+				<string>F55B7E6517B248B80065DF37</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>F55B7E2117B248B80065DF37</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>F55B7E3717B248B80065DF37</string>
+				<string>F55B7E3B17B248B80065DF37</string>
+				<string>F55B7E4717B248B80065DF37</string>
+				<string>F55B7E4A17B248B80065DF37</string>
+				<string>F55B7E4D17B248B80065DF37</string>
+				<string>F55B7E7B17B2521B0065DF37</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>F55B7E2217B248B80065DF37</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>F55B7E7617B24ABE0065DF37</string>
+				<string>F55B7E7417B24A560065DF37</string>
+				<string>F55B7E7217B24A470065DF37</string>
+				<string>F55B7E7017B24A390065DF37</string>
+				<string>F55B7E2917B248B80065DF37</string>
+				<string>F55B7E2B17B248B80065DF37</string>
+				<string>F55B7E2D17B248B80065DF37</string>
+				<string>F55B7E2F17B248B80065DF37</string>
+				<string>F55B7E6E17B249BB0065DF37</string>
+				<string>943589A82213453D9FA78584</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>F55B7E2317B248B80065DF37</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>F55B7E3517B248B80065DF37</string>
+				<string>F55B7E3D17B248B80065DF37</string>
+				<string>F55B7E3F17B248B80065DF37</string>
+				<string>F55B7E4117B248B80065DF37</string>
+				<string>F55B7E4417B248B80065DF37</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>F55B7E2417B248B80065DF37</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>F55B7E6617B248B80065DF37</string>
+			<key>buildPhases</key>
+			<array>
+				<string>D06CE595096143B19911860E</string>
+				<string>F55B7E2117B248B80065DF37</string>
+				<string>F55B7E2217B248B80065DF37</string>
+				<string>F55B7E2317B248B80065DF37</string>
+				<string>B53F119A909F44009C13283F</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>facebookTest</string>
+			<key>productName</key>
+			<string>facebookTest</string>
+			<key>productReference</key>
+			<string>F55B7E2517B248B80065DF37</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>F55B7E2517B248B80065DF37</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>facebookTest.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>F55B7E2617B248B80065DF37</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F55B7E2517B248B80065DF37</string>
+				<string>F55B7E5317B248B80065DF37</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E2717B248B80065DF37</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F55B7E7517B24ABE0065DF37</string>
+				<string>F55B7E7317B24A560065DF37</string>
+				<string>F55B7E7117B24A470065DF37</string>
+				<string>F55B7E6F17B24A390065DF37</string>
+				<string>F55B7E6D17B249BB0065DF37</string>
+				<string>F55B7E2817B248B80065DF37</string>
+				<string>F55B7E2A17B248B80065DF37</string>
+				<string>F55B7E2C17B248B80065DF37</string>
+				<string>F55B7E2E17B248B80065DF37</string>
+				<string>F55B7E5417B248B80065DF37</string>
+				<string>0E25FE5D775D4D848247EC19</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E2817B248B80065DF37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>UIKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/UIKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>F55B7E2917B248B80065DF37</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F55B7E2817B248B80065DF37</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F55B7E2A17B248B80065DF37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>F55B7E2B17B248B80065DF37</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F55B7E2A17B248B80065DF37</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F55B7E2C17B248B80065DF37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreGraphics.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreGraphics.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>F55B7E2D17B248B80065DF37</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F55B7E2C17B248B80065DF37</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F55B7E2E17B248B80065DF37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreData.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreData.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>F55B7E2F17B248B80065DF37</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F55B7E2E17B248B80065DF37</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F55B7E3017B248B80065DF37</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F55B7E6C17B248C80065DF37</string>
+				<string>F55B7E7817B2520D0065DF37</string>
+				<string>F55B7E3917B248B80065DF37</string>
+				<string>F55B7E3A17B248B80065DF37</string>
+				<string>F55B7E4217B248B80065DF37</string>
+				<string>F55B7E4517B248B80065DF37</string>
+				<string>F55B7E3117B248B80065DF37</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>facebookTest</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E3117B248B80065DF37</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F55B7E3217B248B80065DF37</string>
+				<string>F55B7E3317B248B80065DF37</string>
+				<string>F55B7E3617B248B80065DF37</string>
+				<string>F55B7E3817B248B80065DF37</string>
+				<string>F55B7E3C17B248B80065DF37</string>
+				<string>F55B7E3E17B248B80065DF37</string>
+				<string>F55B7E4017B248B80065DF37</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E3217B248B80065DF37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>facebookTest-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E3317B248B80065DF37</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F55B7E3417B248B80065DF37</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E3417B248B80065DF37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E3517B248B80065DF37</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F55B7E3317B248B80065DF37</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F55B7E3617B248B80065DF37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E3717B248B80065DF37</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F55B7E3617B248B80065DF37</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F55B7E3817B248B80065DF37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>facebookTest-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E3917B248B80065DF37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>EFAppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E3A17B248B80065DF37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>EFAppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E3B17B248B80065DF37</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F55B7E3A17B248B80065DF37</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F55B7E3C17B248B80065DF37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>Default.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E3D17B248B80065DF37</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F55B7E3C17B248B80065DF37</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F55B7E3E17B248B80065DF37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>Default@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E3F17B248B80065DF37</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F55B7E3E17B248B80065DF37</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F55B7E4017B248B80065DF37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>Default-568h@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E4117B248B80065DF37</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F55B7E4017B248B80065DF37</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F55B7E4217B248B80065DF37</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F55B7E4317B248B80065DF37</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MainStoryboard.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E4317B248B80065DF37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/MainStoryboard.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E4417B248B80065DF37</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F55B7E4217B248B80065DF37</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F55B7E4517B248B80065DF37</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F55B7E4617B248B80065DF37</string>
+			</array>
+			<key>currentVersion</key>
+			<string>F55B7E4617B248B80065DF37</string>
+			<key>isa</key>
+			<string>XCVersionGroup</string>
+			<key>path</key>
+			<string>facebookTest.xcdatamodeld</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+			<key>versionGroupType</key>
+			<string>wrapper.xcdatamodel</string>
+		</dict>
+		<key>F55B7E4617B248B80065DF37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.xcdatamodel</string>
+			<key>path</key>
+			<string>facebookTest.xcdatamodel</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E4717B248B80065DF37</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F55B7E4517B248B80065DF37</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F55B7E4817B248B80065DF37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>EFMasterViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E4917B248B80065DF37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>EFMasterViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E4A17B248B80065DF37</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F55B7E4917B248B80065DF37</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F55B7E4B17B248B80065DF37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>EFDetailViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E4C17B248B80065DF37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>EFDetailViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E4D17B248B80065DF37</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F55B7E4C17B248B80065DF37</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F55B7E4E17B248B80065DF37</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>F55B7E6317B248B80065DF37</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>F55B7E4F17B248B80065DF37</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>F55B7E5517B248B80065DF37</string>
+				<string>F55B7E5617B248B80065DF37</string>
+				<string>F55B7E5717B248B80065DF37</string>
+				<string>F55B7E5817B248B80065DF37</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>F55B7E5017B248B80065DF37</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>F55B7E6017B248B80065DF37</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>F55B7E5117B248B80065DF37</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string># Run the unit tests in this test bundle.
+"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests"
+</string>
+		</dict>
+		<key>F55B7E5217B248B80065DF37</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>F55B7E6917B248B80065DF37</string>
+			<key>buildPhases</key>
+			<array>
+				<string>F55B7E4E17B248B80065DF37</string>
+				<string>F55B7E4F17B248B80065DF37</string>
+				<string>F55B7E5017B248B80065DF37</string>
+				<string>F55B7E5117B248B80065DF37</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>F55B7E5A17B248B80065DF37</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>facebookTestTests</string>
+			<key>productName</key>
+			<string>facebookTestTests</string>
+			<key>productReference</key>
+			<string>F55B7E5317B248B80065DF37</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle</string>
+		</dict>
+		<key>F55B7E5317B248B80065DF37</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>facebookTestTests.octest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>F55B7E5417B248B80065DF37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>SenTestingKit.framework</string>
+			<key>path</key>
+			<string>Library/Frameworks/SenTestingKit.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>F55B7E5517B248B80065DF37</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F55B7E5417B248B80065DF37</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F55B7E5617B248B80065DF37</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F55B7E2817B248B80065DF37</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F55B7E5717B248B80065DF37</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F55B7E2A17B248B80065DF37</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F55B7E5817B248B80065DF37</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F55B7E2E17B248B80065DF37</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F55B7E5917B248B80065DF37</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>F55B7E1D17B248B80065DF37</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>F55B7E2417B248B80065DF37</string>
+			<key>remoteInfo</key>
+			<string>facebookTest</string>
+		</dict>
+		<key>F55B7E5A17B248B80065DF37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>F55B7E2417B248B80065DF37</string>
+			<key>targetProxy</key>
+			<string>F55B7E5917B248B80065DF37</string>
+		</dict>
+		<key>F55B7E5B17B248B80065DF37</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F55B7E6117B248B80065DF37</string>
+				<string>F55B7E6217B248B80065DF37</string>
+				<string>F55B7E5C17B248B80065DF37</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>facebookTestTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E5C17B248B80065DF37</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F55B7E5D17B248B80065DF37</string>
+				<string>F55B7E5E17B248B80065DF37</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E5D17B248B80065DF37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>facebookTestTests-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E5E17B248B80065DF37</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F55B7E5F17B248B80065DF37</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E5F17B248B80065DF37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E6017B248B80065DF37</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F55B7E5E17B248B80065DF37</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F55B7E6117B248B80065DF37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>facebookTestTests.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E6217B248B80065DF37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>facebookTestTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E6317B248B80065DF37</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F55B7E6217B248B80065DF37</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F55B7E6417B248B80065DF37</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>6.1</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>F55B7E6517B248B80065DF37</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>6.1</string>
+				<key>OTHER_CFLAGS</key>
+				<string>-DNS_BLOCK_ASSERTIONS=1</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>F55B7E6617B248B80065DF37</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>F55B7E6717B248B80065DF37</string>
+				<string>F55B7E6817B248B80065DF37</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>F55B7E6717B248B80065DF37</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>A71BB2CE1923437DA0DD252D</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>"$(SRCROOT)/../FacebookSDK"</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>facebookTest/facebookTest-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>facebookTest/facebookTest-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>F55B7E6817B248B80065DF37</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>A71BB2CE1923437DA0DD252D</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>"$(SRCROOT)/../FacebookSDK"</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>facebookTest/facebookTest-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>facebookTest/facebookTest-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>F55B7E6917B248B80065DF37</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>F55B7E6A17B248B80065DF37</string>
+				<string>F55B7E6B17B248B80065DF37</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>F55B7E6A17B248B80065DF37</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/facebookTest.app/facebookTest</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>"$(SDKROOT)/Developer/Library/Frameworks"</string>
+					<string>"$(DEVELOPER_LIBRARY_DIR)/Frameworks"</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>facebookTest/facebookTest-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>facebookTestTests/facebookTestTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>octest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>F55B7E6B17B248B80065DF37</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/facebookTest.app/facebookTest</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>"$(SDKROOT)/Developer/Library/Frameworks"</string>
+					<string>"$(DEVELOPER_LIBRARY_DIR)/Frameworks"</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>facebookTest/facebookTest-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>facebookTestTests/facebookTestTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>octest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>F55B7E6C17B248C80065DF37</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F55B7E4817B248B80065DF37</string>
+				<string>F55B7E4917B248B80065DF37</string>
+				<string>F55B7E4B17B248B80065DF37</string>
+				<string>F55B7E4C17B248B80065DF37</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Controllers</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E6D17B249BB0065DF37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>FacebookSDK.framework</string>
+			<key>path</key>
+			<string>../FacebookSDK/FacebookSDK.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E6E17B249BB0065DF37</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F55B7E6D17B249BB0065DF37</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F55B7E6F17B24A390065DF37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Accounts.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Accounts.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>F55B7E7017B24A390065DF37</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F55B7E6F17B24A390065DF37</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F55B7E7117B24A470065DF37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Social.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Social.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>F55B7E7217B24A470065DF37</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F55B7E7117B24A470065DF37</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F55B7E7317B24A560065DF37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>compiled.mach-o.dylib</string>
+			<key>name</key>
+			<string>libsqlite3.dylib</string>
+			<key>path</key>
+			<string>usr/lib/libsqlite3.dylib</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>F55B7E7417B24A560065DF37</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F55B7E7317B24A560065DF37</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F55B7E7517B24ABE0065DF37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>AdSupport.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/AdSupport.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>F55B7E7617B24ABE0065DF37</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F55B7E7517B24ABE0065DF37</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F55B7E7817B2520D0065DF37</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F55B7E7917B2521B0065DF37</string>
+				<string>F55B7E7A17B2521B0065DF37</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Views</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E7917B2521B0065DF37</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>EFCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E7A17B2521B0065DF37</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>EFCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55B7E7B17B2521B0065DF37</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F55B7E7A17B2521B0065DF37</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>F55B7E1D17B248B80065DF37</string>
+</dict>
+</plist>
