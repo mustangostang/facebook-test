@@ -81,7 +81,7 @@
                                     <outlet property="userGender" destination="VSN-H8-3zB" id="g21-pv-Mz3"/>
                                     <outlet property="userName" destination="ECA-Rc-pxu" id="iSl-51-yet"/>
                                     <outlet property="userpic" destination="sE5-9a-cKF" id="8u8-6i-nqU"/>
-                                    <segue destination="21" kind="push" id="J0u-QA-psZ"/>
+                                    <segue destination="21" kind="push" identifier="showDetail" id="J0u-QA-psZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -184,7 +184,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Friend" id="26">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="ZVW-iS-S1R"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="ZVW-iS-S1R">
+                            <connections>
+                                <action selector="saveFriend:" destination="21" id="AtE-dc-XGO"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="friendFacebookId" destination="MOe-T2-rvE" id="QD0-9O-LdG"/>
@@ -198,32 +202,6 @@
             <point key="canvasLocation" x="902" y="64"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="EFCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EFCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="userFacebookID" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="userGender" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="userName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="userpic" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="EFDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EFDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="friendFacebookId" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="friendGender" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="friendName" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="friendUserpic" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="EFMasterViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EFMasterViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
