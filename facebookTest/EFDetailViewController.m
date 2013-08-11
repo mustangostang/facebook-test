@@ -31,7 +31,10 @@
     // Update the user interface for the detail item.
 
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
+        self.friendFacebookId.text = [[self.detailItem valueForKey:@"id"] description];
+        self.friendName.text = [[self.detailItem valueForKey:@"name"] description];
+        self.friendGender.text = [[self.detailItem valueForKey:@"gender"] description];
+        self.friendUserpic.text = [[self.detailItem valueForKey:@"picture"] description];
     }
 }
 

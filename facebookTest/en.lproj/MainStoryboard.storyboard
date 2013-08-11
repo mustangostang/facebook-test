@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2524" systemVersion="12A217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1863"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -19,28 +19,28 @@
             </objects>
             <point key="canvasLocation" x="-1" y="64"/>
         </scene>
-        <!--class Prefix:identifier Master View Controller - Master-->
+        <!--Master View Controller - Master-->
         <scene sceneID="18">
             <objects>
                 <tableViewController storyboardIdentifier="" title="Master" id="12" customClass="EFMasterViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="13">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="108" sectionHeaderHeight="22" sectionFooterHeight="22" id="13">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="phq-AM-6qj" style="IBUITableViewCellStyleDefault" id="lJ0-d7-vTF">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                            <tableViewCell autoresizesSubviews="NO" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="phq-AM-6qj" rowHeight="108" style="IBUITableViewCellStyleDefault" id="lJ0-d7-vTF" customClass="EFCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="108"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="107"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" lineBreakMode="tailTruncation" autoshrinkMode="none" baselineAdjustment="alignBaselines" text="Title" adjustsFontSizeToFit="NO" id="phq-AM-6qj">
-                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                        <label autoresizesSubviews="NO" opaque="NO" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="phq-AM-6qj">
+                                            <rect key="frame" x="10" y="0.0" width="280" height="107"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -57,37 +57,106 @@
                             <outlet property="delegate" destination="12" id="15"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="36"/>
+                    <navigationItem key="navigationItem" title="My Friends" id="36"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="459" y="64"/>
         </scene>
-        <!--class Prefix:identifier Detail View Controller - Detail-->
+        <!--Detail View Controller - Detail-->
         <scene sceneID="24">
             <objects>
                 <viewController storyboardIdentifier="" title="Detail" id="21" customClass="EFDetailViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="22">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                    <view key="view" contentMode="top" id="22" customClass="UIScrollView">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label translatesAutoresizingMaskIntoConstraints="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" lineBreakMode="tailTruncation" autoshrinkMode="none" minimumFontSize="10" text="Detail view content goes here" textAlignment="center" id="27">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Facebook ID:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FfR-nn-spS">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="fvS-dq-jD6"/>
+                                    <constraint firstAttribute="width" constant="108" id="iKc-GU-hoc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" size="system"/>
+                                <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hES-xf-FTV">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Gender:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYq-5i-8OJ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="108" id="wA5-mm-Qn4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Userpic:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4R-Sx-DwD">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MOe-T2-rvE">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="RGB-c0-Del"/>
+                                    <constraint firstAttribute="height" constant="30" id="bFU-GW-iAx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wBm-6e-RUZ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="4JP-qE-wat"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="npJ-hO-bjL">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="vA1-Ld-fY8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WBN-kk-gDt">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="27" firstAttribute="centerY" secondItem="22" secondAttribute="centerY" type="default" id="7cE-gL-0wv"/>
-                            <constraint firstItem="27" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="R0m-z7-TWk"/>
-                            <constraint firstAttribute="trailing" secondItem="27" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="pRe-qY-58T"/>
+                            <constraint firstItem="wBm-6e-RUZ" firstAttribute="leading" secondItem="WBN-kk-gDt" secondAttribute="leading" type="default" id="4OS-lp-IoK"/>
+                            <constraint firstItem="h4R-Sx-DwD" firstAttribute="trailing" secondItem="hES-xf-FTV" secondAttribute="trailing" type="default" id="FYd-4B-DuW"/>
+                            <constraint firstItem="MOe-T2-rvE" firstAttribute="top" secondItem="FfR-nn-spS" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="HFl-1W-pqt"/>
+                            <constraint firstItem="FfR-nn-spS" firstAttribute="baseline" secondItem="eYq-5i-8OJ" secondAttribute="baseline" type="default" id="J61-gg-fgn"/>
+                            <constraint firstItem="hES-xf-FTV" firstAttribute="top" secondItem="22" secondAttribute="top" constant="72" id="JBd-Lw-dDE"/>
+                            <constraint firstItem="eYq-5i-8OJ" firstAttribute="leading" secondItem="npJ-hO-bjL" secondAttribute="leading" type="default" id="JfT-wU-vbX"/>
+                            <constraint firstItem="wBm-6e-RUZ" firstAttribute="top" secondItem="hES-xf-FTV" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="MtL-Gq-n4R"/>
+                            <constraint firstItem="hES-xf-FTV" firstAttribute="trailing" secondItem="FfR-nn-spS" secondAttribute="trailing" type="default" id="OSA-hh-KxY"/>
+                            <constraint firstItem="npJ-hO-bjL" firstAttribute="trailing" secondItem="wBm-6e-RUZ" secondAttribute="trailing" type="default" id="OkF-fE-ZHN"/>
+                            <constraint firstItem="FfR-nn-spS" firstAttribute="top" secondItem="22" secondAttribute="top" constant="7" id="Rj2-sL-SIw"/>
+                            <constraint firstItem="h4R-Sx-DwD" firstAttribute="top" secondItem="wBm-6e-RUZ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="WDQ-W9-AwG"/>
+                            <constraint firstItem="MOe-T2-rvE" firstAttribute="baseline" secondItem="npJ-hO-bjL" secondAttribute="baseline" type="default" id="XCm-sO-ewk"/>
+                            <constraint firstItem="wBm-6e-RUZ" firstAttribute="leading" secondItem="MOe-T2-rvE" secondAttribute="leading" type="default" id="Xkl-w0-mc9"/>
+                            <constraint firstItem="MOe-T2-rvE" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="17" id="aBu-57-BQX"/>
+                            <constraint firstItem="WBN-kk-gDt" firstAttribute="trailing" secondItem="wBm-6e-RUZ" secondAttribute="trailing" type="default" id="cgT-gP-xbz"/>
+                            <constraint firstItem="h4R-Sx-DwD" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="j87-fw-amt"/>
+                            <constraint firstItem="hES-xf-FTV" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="nvc-E9-igv"/>
+                            <constraint firstItem="WBN-kk-gDt" firstAttribute="top" secondItem="h4R-Sx-DwD" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="oc5-W7-d9D"/>
+                            <constraint firstItem="FfR-nn-spS" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="p8Q-kX-9wP"/>
+                            <constraint firstItem="npJ-hO-bjL" firstAttribute="top" secondItem="22" secondAttribute="top" constant="38" id="tNB-nc-J8J"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Detail" id="26"/>
+                    <navigationItem key="navigationItem" title="Friend" id="26">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="ZVW-iS-S1R"/>
+                    </navigationItem>
                     <connections>
-                        <outlet property="detailDescriptionLabel" destination="27" id="28"/>
+                        <outlet property="friendFacebookId" destination="MOe-T2-rvE" id="QD0-9O-LdG"/>
+                        <outlet property="friendGender" destination="npJ-hO-bjL" id="PfR-Db-0ir"/>
+                        <outlet property="friendName" destination="wBm-6e-RUZ" id="3TD-I1-2ay"/>
+                        <outlet property="friendUserpic" destination="WBN-kk-gDt" id="Ef0-Gh-Lda"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23" sceneMemberID="firstResponder"/>
@@ -95,6 +164,26 @@
             <point key="canvasLocation" x="902" y="64"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="EFCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EFCell.h"/>
+        </class>
+        <class className="EFDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EFDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="friendFacebookId" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="friendGender" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="friendName" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="friendUserpic" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="EFMasterViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EFMasterViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

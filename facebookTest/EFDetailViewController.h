@@ -12,5 +12,8 @@
 
 @property (strong, nonatomic) id detailItem;
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UITextField *friendName;
+@property (weak, nonatomic) IBOutlet UITextField *friendFacebookId;
+@property (weak, nonatomic) IBOutlet UITextField *friendGender;
+@property (weak, nonatomic) IBOutlet UITextField *friendUserpic;
 @end
