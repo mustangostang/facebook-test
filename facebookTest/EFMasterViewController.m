@@ -12,7 +12,6 @@
 
 #import "EFDetailViewController.h"
 #import "EFAppDelegate.h"
-#import <UIImageView+AFNetworking.h>
 
 @interface EFMasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -167,11 +166,9 @@
 
 - (void)configureCell:(EFCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
+    
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.userName.text = [[object valueForKey:@"name"] description];
-    cell.userGender.text = [[object valueForKey:@"gender"] description];
-    cell.userFacebookID.text = [[object valueForKey:@"id"] description];
-    [cell.userpic setImageWithURL: [NSURL URLWithString: [object valueForKey:@"picture"]]];
+    [cell configureWithObject: object];
 }
 
 @end

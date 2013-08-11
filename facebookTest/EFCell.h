@@ -15,4 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *userFacebookID;
 @property (weak, nonatomic) IBOutlet UILabel *userGender;
 
+- (void)configureWithObject: (NSManagedObject*) object;
+
 @end
