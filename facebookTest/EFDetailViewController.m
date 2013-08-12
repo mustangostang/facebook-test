@@ -8,6 +8,7 @@
 
 #import "EFDetailViewController.h"
 #import "EFAppDelegate.h"
+#import "EFFriend.h"
 
 @interface EFDetailViewController ()
 - (void)configureView;
@@ -33,8 +34,7 @@
     [self.detailItem setValue: self.friendName.text forKey: @"name"];
     [self.detailItem setValue: self.friendGender.text forKey: @"gender"];
     [self.detailItem setValue: self.friendUserpic.text forKey: @"picture"];
-    EFAppDelegate* appDelegate = (EFAppDelegate*)[[UIApplication sharedApplication] delegate];
-    [appDelegate saveContext];
+    [EFFriend commit];
     [self.navigationController popViewControllerAnimated: YES];
 }
 

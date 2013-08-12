@@ -10,4 +10,6 @@
 
 @interface facebookTestTests : SenTestCase
 
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
 @end
