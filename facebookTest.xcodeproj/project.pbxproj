@@ -10,6 +10,7 @@
 		943589A82213453D9FA78584 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E25FE5D775D4D848247EC19 /* libPods.a */; };
 		F505CE2517B8D1680017A599 /* EFFriend.m in Sources */ = {isa = PBXBuildFile; fileRef = F505CE2417B8D1680017A599 /* EFFriend.m */; };
 		F505CE2817B8EC230017A599 /* EFGenderSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F505CE2717B8EC230017A599 /* EFGenderSelectViewController.m */; };
+		F505CE2B17B8F4D90017A599 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F505CE2A17B8F4D90017A599 /* FacebookSDK.framework */; };
 		F55B7E2917B248B80065DF37 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55B7E2817B248B80065DF37 /* UIKit.framework */; };
 		F55B7E2B17B248B80065DF37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55B7E2A17B248B80065DF37 /* Foundation.framework */; };
 		F55B7E2D17B248B80065DF37 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55B7E2C17B248B80065DF37 /* CoreGraphics.framework */; };
@@ -30,7 +31,6 @@
 		F55B7E5817B248B80065DF37 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55B7E2E17B248B80065DF37 /* CoreData.framework */; };
 		F55B7E6017B248B80065DF37 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F55B7E5E17B248B80065DF37 /* InfoPlist.strings */; };
 		F55B7E6317B248B80065DF37 /* facebookTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F55B7E6217B248B80065DF37 /* facebookTestTests.m */; };
-		F55B7E6E17B249BB0065DF37 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55B7E6D17B249BB0065DF37 /* FacebookSDK.framework */; };
 		F55B7E7017B24A390065DF37 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55B7E6F17B24A390065DF37 /* Accounts.framework */; };
 		F55B7E7217B24A470065DF37 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55B7E7117B24A470065DF37 /* Social.framework */; };
 		F55B7E7417B24A560065DF37 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F55B7E7317B24A560065DF37 /* libsqlite3.dylib */; };
@@ -55,6 +55,7 @@
 		F505CE2417B8D1680017A599 /* EFFriend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFFriend.m; sourceTree = "<group>"; };
 		F505CE2617B8EC230017A599 /* EFGenderSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFGenderSelectViewController.h; sourceTree = "<group>"; };
 		F505CE2717B8EC230017A599 /* EFGenderSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFGenderSelectViewController.m; sourceTree = "<group>"; };
+		F505CE2A17B8F4D90017A599 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		F55B7E2517B248B80065DF37 /* facebookTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = facebookTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F55B7E2817B248B80065DF37 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F55B7E2A17B248B80065DF37 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -81,7 +82,6 @@
 		F55B7E5F17B248B80065DF37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F55B7E6117B248B80065DF37 /* facebookTestTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = facebookTestTests.h; sourceTree = "<group>"; };
 		F55B7E6217B248B80065DF37 /* facebookTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = facebookTestTests.m; sourceTree = "<group>"; };
-		F55B7E6D17B249BB0065DF37 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		F55B7E6F17B24A390065DF37 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		F55B7E7117B24A470065DF37 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		F55B7E7317B24A560065DF37 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -103,8 +103,8 @@
 				F55B7E2B17B248B80065DF37 /* Foundation.framework in Frameworks */,
 				F55B7E2D17B248B80065DF37 /* CoreGraphics.framework in Frameworks */,
 				F55B7E2F17B248B80065DF37 /* CoreData.framework in Frameworks */,
-				F55B7E6E17B249BB0065DF37 /* FacebookSDK.framework in Frameworks */,
 				943589A82213453D9FA78584 /* libPods.a in Frameworks */,
+				F505CE2B17B8F4D90017A599 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,11 +154,11 @@
 		F55B7E2717B248B80065DF37 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F505CE2A17B8F4D90017A599 /* FacebookSDK.framework */,
 				F55B7E7517B24ABE0065DF37 /* AdSupport.framework */,
 				F55B7E7317B24A560065DF37 /* libsqlite3.dylib */,
 				F55B7E7117B24A470065DF37 /* Social.framework */,
 				F55B7E6F17B24A390065DF37 /* Accounts.framework */,
-				F55B7E6D17B249BB0065DF37 /* FacebookSDK.framework */,
 				F55B7E2817B248B80065DF37 /* UIKit.framework */,
 				F55B7E2A17B248B80065DF37 /* Foundation.framework */,
 				F55B7E2C17B248B80065DF37 /* CoreGraphics.framework */,
@@ -502,6 +502,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../FacebookSDK\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "facebookTest/facebookTest-Prefix.pch";
@@ -518,6 +519,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../FacebookSDK\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "facebookTest/facebookTest-Prefix.pch";
