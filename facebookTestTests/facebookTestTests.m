@@ -20,21 +20,21 @@
     
     // Sample data
     
-    for (NSManagedObject* friend in [self all]) {
+    for (EFFriend* friend in [self all]) {
         [self.managedObjectContext deleteObject: friend];
     }
     
-    NSManagedObject* jane = [EFFriend insertInContext: self.managedObjectContext];
-    [jane setValue: @"1928202810" forKey: @"id"];
-    [jane setValue: @"Jane Doe" forKey: @"name"];
-    [jane setValue: @"female" forKey: @"gender"];
-    [jane setValue: @"http://fc01.deviantart.net/fs71/i/2011/192/1/7/jane_doe_digital_painting_by_jennyjen91-d3n7qch.jpg" forKey: @"picture"];
+    EFFriend* jane = [EFFriend insertInContext: self.managedObjectContext];
+    jane.facebookId = @"1928202810";
+    jane.name       = @"Jane Doe";
+    jane.gender     = @"female";
+    jane.picture    = @"http://fc01.deviantart.net/fs71/i/2011/192/1/7/jane_doe_digital_painting_by_jennyjen91-d3n7qch.jpg";
     
-    NSManagedObject* john = [EFFriend insertInContext: self.managedObjectContext];
-    [john setValue: @"7778261" forKey: @"id"];
-    [john setValue: @"John Smith" forKey: @"name"];
-    [john setValue: @"male" forKey: @"gender"];
-    [john setValue: @"http://www.adweek.com/files/imagecache/node-blog/blogs/ge_agent_smith.jpg" forKey: @"picture"];
+    EFFriend* john = [EFFriend insertInContext: self.managedObjectContext];
+    john.facebookId = @"7778261";
+    john.name       = @"John Smith";
+    john.gender     = @"male";
+    john.picture    = @"http://www.adweek.com/files/imagecache/node-blog/blogs/ge_agent_smith.jpg";
     
     [EFFriend commit];
 
@@ -44,25 +44,26 @@
 - (NSArray*)all
 {
     NSFetchRequest* allFriendsFetchRequest = [EFFriend fetchRequestForContext: self.managedObjectContext];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending: YES];
+    NSArray *sortDescriptors = @[sortDescriptor];
+    [allFriendsFetchRequest setSortDescriptors:sortDescriptors];
     return [EFFriend executeFetchRequest: allFriendsFetchRequest ForContext: self.managedObjectContext];
 }
 
 - (void)tearDown
 {
-    // Tear-down code here.
-    
     [super tearDown];
 }
 
 - (void)testCount
 {
-    NSLog (@"%@", [self all]);
+    // NSLog (@"%@", [self all]);
     STAssertTrue([[self all] count] == 2, @"Count of friends at start");
 }
 
 - (void)testDelete
 {
-    for (NSManagedObject* friend in [self all]) {
+    for (EFFriend* friend in [self all]) {
         [self.managedObjectContext deleteObject: friend];
     }
     [EFFriend commit];
@@ -71,12 +72,11 @@
 
 - (void) testAdd
 {
-    NSManagedObject* barak = [EFFriend insertInContext: self.managedObjectContext];
-    [barak setValue: @"1231313" forKey: @"id"];
-    [barak setValue: @"Barak Obama" forKey: @"name"];
-    [barak setValue: @"male" forKey: @"gender"];
-    [barak setValue: @"http://www.adweek.com/files/imagecache/node-blog/blogs/ge_agent_smith.jpg" forKey: @"picture"];
-    
+    EFFriend* barak = [EFFriend insertInContext: self.managedObjectContext];
+    barak.facebookId = @"1231313";
+    barak.name       = @"Barak Obama";
+    barak.gender     = @"male";
+    barak.picture    = @"http://www.adweek.com/files/imagecache/node-blog/blogs/ge_agent_smith.jpg";    
     [EFFriend commit];
     
     STAssertTrue([[self all] count] == 3, @"Count of friends after inserting");
@@ -84,39 +84,52 @@
 
 - (void) testSort
 {
-    NSManagedObject* barak = [EFFriend insertInContext: self.managedObjectContext];
-    [barak setValue: @"1231313" forKey: @"id"];
-    [barak setValue: @"Barak Obama" forKey: @"name"];
-    [barak setValue: @"male" forKey: @"gender"];
-    [barak setValue: @"http://www.adweek.com/files/imagecache/node-blog/blogs/ge_agent_smith.jpg" forKey: @"picture"];    
+    EFFriend* barak = [EFFriend insertInContext: self.managedObjectContext];
+    barak.facebookId = @"1231313";
+    barak.name       = @"Barak Obama";
+    barak.gender     = @"male";
+    barak.picture    = @"http://www.adweek.com/files/imagecache/node-blog/blogs/ge_agent_smith.jpg";
     
-    NSFetchRequest* fetchRequest = [EFFriend fetchRequestForContext: self.managedObjectContext];
-    
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending: YES];
-    NSArray *sortDescriptors = @[sortDescriptor];
-    [fetchRequest setSortDescriptors:sortDescriptors];
-    
-    NSArray *friends = [EFFriend executeFetchRequest: fetchRequest ForContext: self.managedObjectContext];
-    NSManagedObject *obama = [friends objectAtIndex: 0];
-    STAssertTrue([[obama valueForKey: @"name"] isEqualToString: @"Barak Obama"], @"Correct sort");
+    EFFriend *obama = [[self all] objectAtIndex: 0];
+    STAssertTrue([obama.name isEqualToString: @"Barak Obama"], @"Correct sort");
 }
 
 - (void) testChange
 {
-    NSManagedObject *jane = [[self all] objectAtIndex: 0];
-    STAssertTrue([[jane valueForKey: @"name"] isEqualToString: @"Jane Doe"], @"Default sort");
-    STAssertTrue([[jane valueForKey: @"id"] isEqualToString: @"1928202810"], @"Default value");
+    EFFriend *jane = [[self all] objectAtIndex: 0];
+    STAssertTrue([jane.name isEqualToString: @"Jane Doe"], @"Default sort");
+    STAssertTrue([jane.facebookId isEqualToString: @"1928202810"], @"Default value");
     
-    [jane setValue: @"600600" forKey: @"id"];
+    jane.facebookId = @"600600";
     [EFFriend commit];
     
-    NSManagedObject *changedJane = [[self all] objectAtIndex: 0];
-    STAssertTrue([[changedJane valueForKey: @"name"] isEqualToString: @"Jane Doe"], @"After change");
-    STAssertTrue([[changedJane valueForKey: @"id"] isEqualToString: @"600600"], @"After change");
-    
+    EFFriend *changedJane = [[self all] objectAtIndex: 0];
+    STAssertTrue([changedJane.name isEqualToString: @"Jane Doe"], @"After change");
+    STAssertTrue([changedJane.facebookId isEqualToString: @"600600"], @"After change");
     
 }
 
+- (void) testFailingGender
+{
+    
+    EFFriend* barak = [EFFriend insertInContext: self.managedObjectContext];
+    barak.facebookId = @"1231313";
+    barak.name       = @"Barak Obama";
+    barak.gender     = @"kangooroo";
+    barak.picture    = @"http://www.adweek.com/files/imagecache/node-blog/blogs/ge_agent_smith.jpg";
+    NSError *error = nil;
+    STAssertFalse ([barak validateForInsert: &error], @"Invalid gender");
+    
+    
+    EFFriend* obama = [EFFriend insertInContext: self.managedObjectContext];
+    obama.facebookId = @"1231313";
+    obama.name       = @"Barak Obama";
+    obama.gender     = @"male";
+    obama.picture    = @"http://www.adweek.com/files/imagecache/node-blog/blogs/ge_agent_smith.jpg";
+    error = nil;
+    STAssertTrue ([obama validateForInsert: &error], @"Valid gender");
+    
+}
 
 
 @end
