@@ -18,6 +18,7 @@ NSString *const MODEL_NAME = @"Friend";
 @dynamic facebookId;
 @dynamic picture;
 
+#pragma mark - Validations
 
 -(BOOL)validateGender:(id *)incomingValue error:(NSError **)outError {
     NSString *gender = *incomingValue;
@@ -28,6 +29,38 @@ NSString *const MODEL_NAME = @"Friend";
     *outError = [NSError errorWithDomain:@"com.empatika.facebookTest" code:1 userInfo: @{ NSLocalizedDescriptionKey: [NSString stringWithFormat: @"Unknown gender: %@", gender ]}];
     return NO;
 }
+
+-(BOOL)validateName:(id *)incomingValue error:(NSError **)outError {
+    NSString *name = *incomingValue;
+    if (!name) return YES;
+    name = [name stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceCharacterSet]];
+    if (![name isEqualToString: @""]) {
+        return YES;
+    }
+    *outError = [NSError errorWithDomain:@"com.empatika.facebookTest" code:2 userInfo: @{ NSLocalizedDescriptionKey: @"Name could not be empty." }];
+    return NO;
+}
+
+-(BOOL)validateFacebookId:(id *)incomingValue error:(NSError **)outError {
+    NSString *facebookId = *incomingValue;
+    if (!facebookId) return YES;
+    facebookId = [facebookId stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceCharacterSet]];
+    if (![facebookId isEqualToString: @""]) {
+        return YES;
+    }
+    *outError = [NSError errorWithDomain:@"com.empatika.facebookTest" code:3 userInfo: @{ NSLocalizedDescriptionKey: @"Facebook ID could not be empty." }];
+    return NO;
+}
+
+-(BOOL)validatePicture:(id *)incomingValue error:(NSError **)outError {
+    NSString *picture = *incomingValue;
+    if (!picture) return YES;
+    if ([NSURL URLWithString: picture]) return YES;
+    *outError = [NSError errorWithDomain:@"com.empatika.facebookTest" code:4 userInfo: @{ NSLocalizedDescriptionKey: @"Invalid URL for picture." }];
+    return NO;
+}
+
+#pragma mark - Shortcuts for Core Data
 
 + (NSFetchRequest *) fetchRequestForContext: (NSManagedObjectContext *)context
 {
@@ -63,5 +96,11 @@ NSString *const MODEL_NAME = @"Friend";
     [delegate saveContext];
 }
 
+// Shortcut for [AppDelegate saveContext]
++ (void)rollback
+{
+    EFAppDelegate* delegate = [[UIApplication sharedApplication] delegate];
+    [delegate.managedObjectContext rollback];
+}
 
 @end

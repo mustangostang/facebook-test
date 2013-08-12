@@ -15,6 +15,7 @@
 + (NSArray *)executeFetchRequest: (NSFetchRequest *) request ForContext: (NSManagedObjectContext *)context;
 + (EFFriend *)insertInContext: (NSManagedObjectContext *)context;
 + (void)commit;
++ (void)rollback;
 
 @property (strong, nonatomic) NSString* name;
 @property (strong, nonatomic) NSString* gender;
