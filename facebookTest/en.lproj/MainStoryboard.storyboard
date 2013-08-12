@@ -141,7 +141,7 @@
                                             <constraint firstItem="ZWK-6R-Jy4" firstAttribute="centerY" secondItem="uRQ-4A-sfK" secondAttribute="centerY" type="default" id="oIx-z7-dpH"/>
                                         </constraints>
                                     </tableViewCell>
-                                    <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="VXr-5n-bBv">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="VXr-5n-bBv">
                                         <rect key="frame" x="0.0" y="55" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
