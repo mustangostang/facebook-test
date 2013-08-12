@@ -13,7 +13,7 @@
 
 + (NSFetchRequest *) fetchRequestForContext: (NSManagedObjectContext *)context;
 + (NSArray *)executeFetchRequest: (NSFetchRequest *) request ForContext: (NSManagedObjectContext *)context;
-+ (EFFriend *)insertInContext: (NSManagedObjectContext *)context;
++ (NSManagedObject *)insertInContext: (NSManagedObjectContext *)context;
 + (void)commit;
 
 @end

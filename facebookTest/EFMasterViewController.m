@@ -89,7 +89,7 @@
          for (NSDictionary<FBGraphUser>* friend in friends) {
              for (NSUInteger i = 0; i < 10; i++) {
                  
-                 EFFriend* newFriend = [EFFriend insertInContext: self.managedObjectContext];
+                 NSManagedObject* newFriend = [EFFriend insertInContext: self.managedObjectContext];
                  [newFriend setValue: friend[@"id"] forKey: @"id"];
                  [newFriend setValue: friend[@"name"] forKey: @"name"];
                  [newFriend setValue: friend[@"gender"] forKey: @"gender"];

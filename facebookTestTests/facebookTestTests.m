@@ -24,13 +24,13 @@
         [self.managedObjectContext deleteObject: friend];
     }
     
-    EFFriend* jane = [EFFriend insertInContext: self.managedObjectContext];
+    NSManagedObject* jane = [EFFriend insertInContext: self.managedObjectContext];
     [jane setValue: @"1928202810" forKey: @"id"];
     [jane setValue: @"Jane Doe" forKey: @"name"];
     [jane setValue: @"female" forKey: @"gender"];
     [jane setValue: @"http://fc01.deviantart.net/fs71/i/2011/192/1/7/jane_doe_digital_painting_by_jennyjen91-d3n7qch.jpg" forKey: @"picture"];
     
-    EFFriend* john = [EFFriend insertInContext: self.managedObjectContext];
+    NSManagedObject* john = [EFFriend insertInContext: self.managedObjectContext];
     [john setValue: @"7778261" forKey: @"id"];
     [john setValue: @"John Smith" forKey: @"name"];
     [john setValue: @"male" forKey: @"gender"];
@@ -71,7 +71,7 @@
 
 - (void) testAdd
 {
-    EFFriend* barak = [EFFriend insertInContext: self.managedObjectContext];
+    NSManagedObject* barak = [EFFriend insertInContext: self.managedObjectContext];
     [barak setValue: @"1231313" forKey: @"id"];
     [barak setValue: @"Barak Obama" forKey: @"name"];
     [barak setValue: @"male" forKey: @"gender"];
@@ -84,7 +84,7 @@
 
 - (void) testSort
 {
-    EFFriend* barak = [EFFriend insertInContext: self.managedObjectContext];
+    NSManagedObject* barak = [EFFriend insertInContext: self.managedObjectContext];
     [barak setValue: @"1231313" forKey: @"id"];
     [barak setValue: @"Barak Obama" forKey: @"name"];
     [barak setValue: @"male" forKey: @"gender"];

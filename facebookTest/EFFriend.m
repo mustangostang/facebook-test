@@ -34,7 +34,7 @@ NSString *const MODEL_NAME = @"Friend";
     return friends;
 }
 
-+ (EFFriend *)insertInContext: (NSManagedObjectContext *)context
++ (NSManagedObject *)insertInContext: (NSManagedObjectContext *)context
 {
     return [NSEntityDescription insertNewObjectForEntityForName: MODEL_NAME inManagedObjectContext: context];
 }
