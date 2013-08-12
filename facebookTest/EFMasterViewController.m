@@ -93,6 +93,13 @@
                  newFriend.name       = friend[@"name"];
                  newFriend.gender     = friend[@"gender"];
                  newFriend.picture    = friend[@"picture"][@"data"][@"url"];
+                 NSError *error = nil;
+                 if (![newFriend validateForInsert: &error]) {
+                     UIAlertView *networkError = [[UIAlertView alloc] initWithTitle: @"Core Data Error" message: [error localizedDescription] delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil];
+                     [networkError show];
+                     NSLog (@"Core Data error: %@", error);
+                     return;
+                 }
              }
          }
          

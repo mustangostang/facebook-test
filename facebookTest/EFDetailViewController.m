@@ -33,6 +33,15 @@
     self.friendItem.name       = self.friendName.text;
     self.friendItem.gender     = self.friendGender.text;
     self.friendItem.picture    = self.friendUserpic.text;
+    
+    NSError *error = nil;
+    if (![self.friendItem validateForUpdate: &error]) {
+        UIAlertView *networkError = [[UIAlertView alloc] initWithTitle: @"Core Data Error" message: [error localizedDescription] delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil];
+        [networkError show];
+        NSLog (@"Core Data error: %@", error);
+        return;
+    }
+    
     [EFFriend commit];
     [self.navigationController popViewControllerAnimated: YES];
 }

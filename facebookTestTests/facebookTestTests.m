@@ -129,6 +129,10 @@
     error = nil;
     STAssertTrue ([obama validateForInsert: &error], @"Valid gender");
     
+    obama.gender     = @"butterfly";
+    error = nil;
+    STAssertFalse ([obama validateForUpdate: &error], @"Invalid gender");
+    
 }
 
 
