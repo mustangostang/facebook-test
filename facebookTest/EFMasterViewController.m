@@ -98,6 +98,7 @@
                      UIAlertView *networkError = [[UIAlertView alloc] initWithTitle: @"Core Data Error" message: [error localizedDescription] delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil];
                      [networkError show];
                      NSLog (@"Core Data error: %@", error);
+                     [EFFriend rollback];
                      return;
                  }
              }
