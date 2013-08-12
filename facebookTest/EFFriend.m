@@ -55,7 +55,8 @@ NSString *const MODEL_NAME = @"Friend";
 -(BOOL)validatePicture:(id *)incomingValue error:(NSError **)outError {
     NSString *picture = *incomingValue;
     if (!picture) return YES;
-    if ([NSURL URLWithString: picture]) return YES;
+    NSURL *pictureURL = [NSURL URLWithString: picture];
+    if (pictureURL != nil) return YES;
     *outError = [NSError errorWithDomain:@"com.empatika.facebookTest" code:4 userInfo: @{ NSLocalizedDescriptionKey: @"Invalid URL for picture." }];
     return NO;
 }

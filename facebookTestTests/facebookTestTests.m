@@ -111,7 +111,6 @@
 
 - (void) testFailingGender
 {
-    
     EFFriend* barak = [EFFriend insertInContext: self.managedObjectContext];
     barak.facebookId = @"1231313";
     barak.name       = @"Barak Obama";
@@ -132,8 +131,44 @@
     obama.gender     = @"butterfly";
     error = nil;
     STAssertFalse ([obama validateForUpdate: &error], @"Invalid gender");
-    
 }
 
+
+- (void) testFailingFacebookID
+{
+    EFFriend* barak = [EFFriend insertInContext: self.managedObjectContext];
+    barak.facebookId = @"";
+    barak.name       = @"Barak Obama";
+    barak.gender     = @"male";
+    barak.picture    = @"http://www.adweek.com/files/imagecache/node-blog/blogs/ge_agent_smith.jpg";
+    NSError *error = nil;
+    STAssertFalse ([barak validateForInsert: &error], @"Invalid Facebook ID");
+}
+
+- (void) testFailingName
+{
+    EFFriend* barak = [EFFriend insertInContext: self.managedObjectContext];
+    barak.facebookId = @"1231238";
+    barak.name       = @"    ";
+    barak.gender     = @"male";
+    barak.picture    = @"http://www.adweek.com/files/imagecache/node-blog/blogs/ge_agent_smith.jpg";
+    NSError *error = nil;
+    STAssertFalse ([barak validateForInsert: &error], @"Invalid name");
+    
+    barak.name     = @"";
+    error = nil;
+    STAssertFalse ([barak validateForUpdate: &error], @"Invalid name");
+}
+
+- (void) testFailingPicture
+{
+    EFFriend* barak = [EFFriend insertInContext: self.managedObjectContext];
+    barak.facebookId = @"123123134";
+    barak.name       = @"Barak Obama";
+    barak.gender     = @"male";
+    barak.picture    = @"zzz://fub\"\"";
+    NSError *error = nil;
+    STAssertFalse ([barak validateForInsert: &error], @"Invalid picture URL");
+}
 
 @end
