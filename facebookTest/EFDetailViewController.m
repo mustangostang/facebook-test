@@ -55,8 +55,8 @@
 {
     [super viewDidLoad];
     
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"UPDATE_GENDER" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateGender:) name:@"UPDATE_GENDER" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NOTIFICATION_GENDER_CHANGED object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateGender:) name:NOTIFICATION_GENDER_CHANGED object:nil];
     
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];

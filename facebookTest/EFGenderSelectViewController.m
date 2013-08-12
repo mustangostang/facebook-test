@@ -7,6 +7,7 @@
 //
 
 #import "EFGenderSelectViewController.h"
+#import "EFDetailViewController.h"
 
 @interface EFGenderSelectViewController ()
 
@@ -36,8 +37,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"EFSexCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EFSexCell" forIndexPath:indexPath];
     NSUInteger position = [indexPath indexAtPosition: 1];
     NSString *key = [self.genderKeys objectAtIndex: position];
     cell.textLabel.text = self.genderValues[key];
@@ -54,7 +54,7 @@
     NSUInteger position = [indexPath indexAtPosition: 1];
     NSString *selectedKey = [self.genderKeys objectAtIndex: position];
     
-    [[NSNotificationCenter defaultCenter] postNotificationName: @"UPDATE_GENDER" object: nil userInfo: @{ @"gender": selectedKey } ];
+    [[NSNotificationCenter defaultCenter] postNotificationName: NOTIFICATION_GENDER_CHANGED object: nil userInfo: @{ @"gender": selectedKey } ];
     
     [self.navigationController popViewControllerAnimated:YES];
 }
