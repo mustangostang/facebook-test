@@ -7,21 +7,22 @@
 //
 
 #import "EFCell.h"
+#import "EFFriend.h"
 #import <UIImageView+AFNetworking.h>
 
 @implementation EFCell
 
-- (void)configureWithObject: (NSManagedObject*) object
+- (void)configureWithObject: (EFFriend*) object
 {
-    self.userName.text = [[object valueForKey:@"name"] description];
+    self.userName.text = object.name;
     
     NSDictionary* genderMap = @{ @"male": @"♂", @"female": @"♀" };
     self.userGender.text = @"?";
-    if (genderMap[[object valueForKey:@"gender"]]) {
-        self.userGender.text = genderMap[[object valueForKey:@"gender"]];
+    if (genderMap[object.gender]) {
+        self.userGender.text = genderMap[object.gender];
     }
-    self.userFacebookID.text = [[object valueForKey:@"id"] description];
-    [self.userpic setImageWithURL: [NSURL URLWithString: [object valueForKey:@"picture"]]];
+    self.userFacebookID.text = object.facebookId;
+    [self.userpic setImageWithURL: [NSURL URLWithString: object.picture]];
 
 }
 

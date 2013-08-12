@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EFFriend.h"
 
 @interface EFDetailViewController : UITableViewController
 
-@property (strong, nonatomic) id detailItem;
+@property (strong, nonatomic) EFFriend* friendItem;
 
 @property (weak, nonatomic) IBOutlet UITextField *friendName;
 @property (weak, nonatomic) IBOutlet UITextField *friendFacebookId;

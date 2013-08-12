@@ -40,7 +40,7 @@
     
     NSFetchRequest* allFriendsFetchRequest = [EFFriend fetchRequestForContext: self.managedObjectContext];
     allFriendsFetchRequest.includesPropertyValues = NO;
-    for (NSManagedObject* friend in [EFFriend executeFetchRequest: allFriendsFetchRequest ForContext: self.managedObjectContext]) {
+    for (EFFriend* friend in [EFFriend executeFetchRequest: allFriendsFetchRequest ForContext: self.managedObjectContext]) {
         [self.managedObjectContext deleteObject: friend];
     }
     [EFFriend commit];
@@ -88,13 +88,11 @@
          
          for (NSDictionary<FBGraphUser>* friend in friends) {
              for (NSUInteger i = 0; i < 10; i++) {
-                 
-                 NSManagedObject* newFriend = [EFFriend insertInContext: self.managedObjectContext];
-                 [newFriend setValue: friend[@"id"] forKey: @"id"];
-                 [newFriend setValue: friend[@"name"] forKey: @"name"];
-                 [newFriend setValue: friend[@"gender"] forKey: @"gender"];
-                 [newFriend setValue: friend[@"picture"][@"data"][@"url"] forKey: @"picture"];
-                 
+                 EFFriend* newFriend = [EFFriend insertInContext: self.managedObjectContext];
+                 newFriend.facebookId = friend[@"id"];
+                 newFriend.name       = friend[@"name"];
+                 newFriend.gender     = friend[@"gender"];
+                 newFriend.picture    = friend[@"picture"][@"data"][@"url"];
              }
          }
          
@@ -128,9 +126,9 @@
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+        EFFriend *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
         EFDetailViewController* destinationController = [segue destinationViewController];
-        destinationController.detailItem = object;
+        destinationController.friendItem = object;
     }
 }
 
@@ -169,8 +167,7 @@
 
 - (void)configureCell:(EFCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    
-    NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    EFFriend *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
     [cell configureWithObject: object];
 }
 

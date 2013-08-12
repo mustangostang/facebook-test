@@ -13,6 +13,22 @@ NSString *const MODEL_NAME = @"Friend";
 
 @implementation EFFriend
 
+@dynamic gender;
+@dynamic name;
+@dynamic facebookId;
+@dynamic picture;
+
+
+-(BOOL)validateGender:(id *)incomingValue error:(NSError **)outError {
+    NSString *gender = *incomingValue;
+    if (!gender) return YES;
+    if ([gender isEqualToString: @"male"] || [gender isEqualToString: @"female"] || [gender isEqualToString: @"unknown"]) {
+        return YES;
+    }
+    *outError = [NSError errorWithDomain:@"com.empatika.facebookTest" code:1 userInfo: @{ NSLocalizedDescriptionKey: [NSString stringWithFormat: @"Unknown gender: %@", gender ]}];
+    return NO;
+}
+
 + (NSFetchRequest *) fetchRequestForContext: (NSManagedObjectContext *)context
 {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
@@ -34,7 +50,7 @@ NSString *const MODEL_NAME = @"Friend";
     return friends;
 }
 
-+ (NSManagedObject *)insertInContext: (NSManagedObjectContext *)context
++ (EFFriend *)insertInContext: (NSManagedObjectContext *)context
 {
     return [NSEntityDescription insertNewObjectForEntityForName: MODEL_NAME inManagedObjectContext: context];
 }

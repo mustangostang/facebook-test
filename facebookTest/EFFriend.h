@@ -13,7 +13,12 @@
 
 + (NSFetchRequest *) fetchRequestForContext: (NSManagedObjectContext *)context;
 + (NSArray *)executeFetchRequest: (NSFetchRequest *) request ForContext: (NSManagedObjectContext *)context;
-+ (NSManagedObject *)insertInContext: (NSManagedObjectContext *)context;
++ (EFFriend *)insertInContext: (NSManagedObjectContext *)context;
 + (void)commit;
+
+@property (strong, nonatomic) NSString* name;
+@property (strong, nonatomic) NSString* gender;
+@property (strong, nonatomic) NSString* facebookId;
+@property (strong, nonatomic) NSString* picture;
 
 @end
