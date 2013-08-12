@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EFDetailViewController : UIViewController
+@interface EFDetailViewController : UITableViewController
 
 @property (strong, nonatomic) id detailItem;
 
