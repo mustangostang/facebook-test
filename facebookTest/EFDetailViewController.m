@@ -7,6 +7,7 @@
 //
 
 #import "EFDetailViewController.h"
+#import "EFGenderSelectViewController.h"
 #import "EFAppDelegate.h"
 #import "EFFriend.h"
 
@@ -53,8 +54,26 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"UPDATE_GENDER" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateGender:) name:@"UPDATE_GENDER" object:nil];
+    
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+}
+
+- (void)updateGender:(NSNotification *)notification
+{
+    NSDictionary *info = [notification userInfo];
+    self.friendGender.text = info[@"gender"];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"sexView"]) {
+        EFGenderSelectViewController* destinationController = [segue destinationViewController];
+        destinationController.selectedGender = self.friendGender.text;
+    }
 }
 
 - (void)didReceiveMemoryWarning

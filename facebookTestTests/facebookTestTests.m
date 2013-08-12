@@ -18,6 +18,8 @@
     EFAppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
     self.managedObjectContext = [appDelegate managedObjectContext];
     
+    // Sample data
+    
     for (NSManagedObject* friend in [self all]) {
         [self.managedObjectContext deleteObject: friend];
     }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		943589A82213453D9FA78584 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E25FE5D775D4D848247EC19 /* libPods.a */; };
 		F505CE2517B8D1680017A599 /* EFFriend.m in Sources */ = {isa = PBXBuildFile; fileRef = F505CE2417B8D1680017A599 /* EFFriend.m */; };
+		F505CE2817B8EC230017A599 /* EFGenderSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F505CE2717B8EC230017A599 /* EFGenderSelectViewController.m */; };
 		F55B7E2917B248B80065DF37 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55B7E2817B248B80065DF37 /* UIKit.framework */; };
 		F55B7E2B17B248B80065DF37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55B7E2A17B248B80065DF37 /* Foundation.framework */; };
 		F55B7E2D17B248B80065DF37 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55B7E2C17B248B80065DF37 /* CoreGraphics.framework */; };
@@ -52,6 +53,8 @@
 		A71BB2CE1923437DA0DD252D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		F505CE2317B8D1680017A599 /* EFFriend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFFriend.h; sourceTree = "<group>"; };
 		F505CE2417B8D1680017A599 /* EFFriend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFFriend.m; sourceTree = "<group>"; };
+		F505CE2617B8EC230017A599 /* EFGenderSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFGenderSelectViewController.h; sourceTree = "<group>"; };
+		F505CE2717B8EC230017A599 /* EFGenderSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFGenderSelectViewController.m; sourceTree = "<group>"; };
 		F55B7E2517B248B80065DF37 /* facebookTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = facebookTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F55B7E2817B248B80065DF37 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F55B7E2A17B248B80065DF37 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -221,6 +224,8 @@
 				F55B7E4917B248B80065DF37 /* EFMasterViewController.m */,
 				F55B7E4B17B248B80065DF37 /* EFDetailViewController.h */,
 				F55B7E4C17B248B80065DF37 /* EFDetailViewController.m */,
+				F505CE2617B8EC230017A599 /* EFGenderSelectViewController.h */,
+				F505CE2717B8EC230017A599 /* EFGenderSelectViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -384,6 +389,7 @@
 				F55B7E4D17B248B80065DF37 /* EFDetailViewController.m in Sources */,
 				F55B7E7B17B2521B0065DF37 /* EFCell.m in Sources */,
 				F505CE2517B8D1680017A599 /* EFFriend.m in Sources */,
+				F505CE2817B8EC230017A599 /* EFGenderSelectViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

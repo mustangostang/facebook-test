@@ -14,6 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *friendName;
 @property (weak, nonatomic) IBOutlet UITextField *friendFacebookId;
-@property (weak, nonatomic) IBOutlet UITextField *friendGender;
+@property (weak, nonatomic) IBOutlet UILabel *friendGender;
 @property (weak, nonatomic) IBOutlet UITextField *friendUserpic;
+
 @end

@@ -108,7 +108,7 @@
                         <sections>
                             <tableViewSection id="LD6-dZ-RcQ">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="uRQ-4A-sfK">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="uRQ-4A-sfK">
                                         <rect key="frame" x="0.0" y="10" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -141,7 +141,7 @@
                                             <constraint firstItem="ZWK-6R-Jy4" firstAttribute="centerY" secondItem="uRQ-4A-sfK" secondAttribute="centerY" type="default" id="oIx-z7-dpH"/>
                                         </constraints>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="VXr-5n-bBv">
+                                    <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="VXr-5n-bBv">
                                         <rect key="frame" x="0.0" y="55" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -174,26 +174,23 @@
                                             <constraint firstItem="NpP-ww-sZZ" firstAttribute="leading" secondItem="VXr-5n-bBv" secondAttribute="leading" constant="10" id="vZh-AH-nLn"/>
                                         </constraints>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="aZ0-1B-x6M">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="aZ0-1B-x6M">
                                         <rect key="frame" x="0.0" y="99" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Doq-Pd-f0s">
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="220" id="IV1-TD-ELO"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sex" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s53-Ow-4HS">
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="EBw-xo-rCg"/>
                                                         <constraint firstAttribute="width" constant="55" id="hlI-WQ-eqq"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="UFO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NB8-XN-N4e">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
@@ -201,13 +198,17 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="Doq-Pd-f0s" firstAttribute="centerY" secondItem="aZ0-1B-x6M" secondAttribute="centerY" type="default" id="7eR-tn-WGr"/>
-                                            <constraint firstAttribute="trailing" secondItem="Doq-Pd-f0s" secondAttribute="trailing" constant="20" type="default" id="Dy0-T5-Jvg"/>
                                             <constraint firstItem="s53-Ow-4HS" firstAttribute="leading" secondItem="aZ0-1B-x6M" secondAttribute="leading" constant="10" id="Ygv-yQ-KeP"/>
+                                            <constraint firstItem="NB8-XN-N4e" firstAttribute="baseline" secondItem="s53-Ow-4HS" secondAttribute="baseline" type="default" id="hah-Ge-X4b"/>
+                                            <constraint firstItem="NB8-XN-N4e" firstAttribute="leading" secondItem="aZ0-1B-x6M" secondAttribute="leading" constant="80" id="kcv-zu-FcN"/>
                                             <constraint firstItem="s53-Ow-4HS" firstAttribute="top" secondItem="aZ0-1B-x6M" secondAttribute="top" constant="11" id="swx-sg-w2T"/>
+                                            <constraint firstItem="NB8-XN-N4e" firstAttribute="top" secondItem="s53-Ow-4HS" secondAttribute="top" type="default" id="xbg-ZU-o94"/>
                                         </constraints>
+                                        <connections>
+                                            <segue destination="Vc1-kB-4SX" kind="push" identifier="sexView" id="Pwh-Ru-MTT"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="ZAP-uw-kT2">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="ZAP-uw-kT2">
                                         <rect key="frame" x="0.0" y="143" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -254,7 +255,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="friendFacebookId" destination="Alx-MV-OYP" id="JZY-Wf-4kn"/>
-                        <outlet property="friendGender" destination="Doq-Pd-f0s" id="IQL-Ag-XxJ"/>
+                        <outlet property="friendGender" destination="NB8-XN-N4e" id="Nbe-cI-WlF"/>
                         <outlet property="friendName" destination="q4V-I3-Jiz" id="bVA-uL-3So"/>
                         <outlet property="friendUserpic" destination="GHq-p1-45Z" id="jVl-Sb-N8t"/>
                     </connections>
@@ -262,6 +263,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="902" y="64"/>
+        </scene>
+        <!--Gender Select View Controller - Select Sex-->
+        <scene sceneID="NQZ-B7-w8B">
+            <objects>
+                <tableViewController id="Vc1-kB-4SX" customClass="EFGenderSelectViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="NeV-5T-QXe">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="EFSexCell" id="7Yi-EO-S3r">
+                                <rect key="frame" x="0.0" y="46" width="320" height="46"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egt-96-0d0">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="egt-96-0d0" firstAttribute="leading" secondItem="7Yi-EO-S3r" secondAttribute="leading" constant="30" id="Rvf-qL-GLi"/>
+                                    <constraint firstItem="egt-96-0d0" firstAttribute="centerY" secondItem="7Yi-EO-S3r" secondAttribute="centerY" type="default" id="qdb-1A-58R"/>
+                                </constraints>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="Vc1-kB-4SX" id="om6-If-dUV"/>
+                            <outlet property="delegate" destination="Vc1-kB-4SX" id="lZI-Yu-XBm"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Select Sex" id="yj0-na-iZ8"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w3z-zB-4I7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1308" y="71"/>
         </scene>
     </scenes>
     <classes>
@@ -278,10 +321,13 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EFDetailViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="friendFacebookId" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="friendGender" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="friendGender" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="friendName" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="friendUserpic" candidateClass="UITextField"/>
             </relationships>
+        </class>
+        <class className="EFGenderSelectViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EFGenderSelectViewController.h"/>
         </class>
         <class className="EFMasterViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EFMasterViewController.h"/>
