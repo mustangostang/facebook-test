@@ -54,10 +54,28 @@
     // Add new
     
     [FBSession openActiveSessionWithReadPermissions: nil allowLoginUI: YES completionHandler: ^(FBSession *session, FBSessionState status, NSError *error) {
+        if (error) {
+            UIAlertView *networkError = [[UIAlertView alloc] initWithTitle: @"Can't open Facebook session" message: [error localizedDescription] delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil];
+            [networkError show];
+            return;
+        }
+        
         [FBRequestConnection startWithGraphPath:@"me/friends" parameters: @{ @"fields": @"id,name,gender,picture" } HTTPMethod: @"GET" completionHandler:
          ^(FBRequestConnection *connection, id result, NSError *error) {
+             
+             if (error) {
+                 UIAlertView *networkError = [[UIAlertView alloc] initWithTitle: @"Can't load Facebook friends" message: [error localizedDescription] delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil];
+                 [networkError show];
+                 return;
+             }
+
+             if (![result objectForKey:@"data"]) {
+                 UIAlertView *networkError = [[UIAlertView alloc] initWithTitle: @"Can't load Facebook friends" message: @"Facebook returned invalid data" delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil];
+                 [networkError show];
+                 return;
+             }
+             
             NSArray* friends = [result objectForKey:@"data"];
-            // NSLog(@"Found: %i friends", friends.count);
              
             for (NSDictionary<FBGraphUser>* friend in friends) {
                 for (NSUInteger i = 0; i < 10; i++) {
@@ -149,10 +167,9 @@
     
 	NSError *error = nil;
 	if (![self.fetchedResultsController performFetch:&error]) {
-	     // Replace this implementation with code to handle the error appropriately.
-	     // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
+        UIAlertView *coreDataError = [[UIAlertView alloc] initWithTitle: @"CoreData Error" message: [error localizedDescription] delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil];
+        [coreDataError show];
 	    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-	    abort();
 	}
     
     return _fetchedResultsController;
@@ -160,7 +177,6 @@
  
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
-    // In the simplest, most efficient, case, reload the table view.
     [self.tableView reloadData];
 }
 
